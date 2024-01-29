@@ -1,5 +1,5 @@
 #include <WiFi.h>
-#include <Wire.h> //Conexión de dispositivos I2C
+#include <Wire.h> //I2C connection
 
 // Replace with your network credentials
 const char *ssid = "SSID";
@@ -18,9 +18,10 @@ unsigned long previousTime = 0;
 // Define timeout time in milliseconds (example: 2000ms = 2s)
 const long timeoutTime = 2000;
 
-int state = 0; // 0 para apagado, 1 para encendido
+int state = 0; // 0 off, 1 on
 int state2 = 0;
-int led1=16;
+
+int led1=16;//pin led
 
 void setup() {
    pinMode(led1,OUTPUT);
