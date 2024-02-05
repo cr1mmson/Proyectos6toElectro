@@ -6,6 +6,8 @@
 #define WIFI_SSID      "SSID"
 #define WIFI_PASS      "Password"
 
+AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+
 AdafruitIO_Feed *gas = io.feed("ac");
 
 int ap=16;
