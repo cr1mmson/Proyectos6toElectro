@@ -23,9 +23,6 @@ Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 const int ap = 34;
 
-unsigned long intervalo=20000;
-unsigned long previousMillis=0;
-
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 
 
@@ -56,13 +53,9 @@ Serial.print("Connecting to Adafruit IO");
 void loop() {
 
  io.run();
-  unsigned long currentMillis = millis();
-if (currentMillis - previousMillis >= intervalo) {
+ 
 
 air();
-
-previousMillis = currentMillis;
- }
 
 if(por>=600 && por<=750){
  pixels.clear();
