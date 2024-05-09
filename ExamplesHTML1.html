@@ -1,0 +1,127 @@
+<!--style es una etiqueta que nos permite agregar sintaxis 
+CSS en  nuestra pagina web
+    
+    Nombre del elemento html que vamos a modificar{ATRIBUTOS
+    DE NUESTRO ELEMENTO HTML}
+
+    background-color: color(inglès); Sirve para cambiar el color
+    del fondo de nuestro elemento.
+
+    color: color; Sirve para cambiar el color de letra de nuestro
+    elemento.
+    
+    border: none; Sirve para modificar el borde de nuestro
+    elemento(none significa que no queremos borde)
+
+    height: pixeles; Es la altura de nuestro elemento
+
+    width: pixeles; Es el ancho de nuestro elemento
+
+    border-radius: pixeles; Sirve para cambiar el radio del 
+    contorno en nuestro elemento
+
+    cursor: pointer; Sirve para cambiar el estilo de nuestro
+    cursor cuando lo pasamos por encima de nuestro elemento
+
+    border-color: rgb o hex; Nos sirve para cambiar el color
+    de nuestro borde
+
+    border-style: solid; Nos sirve para cambiar el estilo del
+    borde (solid, dotted, dashed)
+
+    border-height: pixeles; Nos sirve para cambiar el tamaños
+
+    font-size: pixeles; Cambiamos el tamaño de nuestra fuente
+
+    font-weight: tipo;  Cambiamos el estilo de nuestra fuente
+
+        TRANSICIONES
+    PARA TRANSICIONAR DE UN ESTADO A OTRO 
+    UTILIZAMOS PSEUDOCLASES(hover,activel, etc)
+    
+    ESTRUCTURA
+        nombre del atributo:clase{
+            atributos mientras se ejecute esa 
+            clase
+        }
+
+    ATRIBUTOS
+    opacity: 0-1; cambia la opacidad de nuestro
+    elemento
+
+    box-shadow: <y> <x> <blur> <color>; añade una 
+        sombra a nuestro elemento
+
+    transition: <elemento> <duración(segundos)>
+        Añade una transición a nuestro elemento
+
+-->
+
+
+<style>
+    .boton_suscripcion{
+        background-color: #f70404;
+        color: #ffff;
+        border: none;
+        height: 31px;
+        width: 88px;
+        border-radius: 20px;
+        cursor: pointer;    
+
+    }
+
+    .boton_suscripcion:hover{
+       opacity: 0.7;
+    }
+
+    .boton_suscripcion:active{
+       opacity: 0.2;
+    }
+
+    .boton_tweet{
+        background-color: rgb(31, 155, 238);
+        color:  rgb(255, 255, 255);
+        border: none;
+        height: 31px;
+        width: 70px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bold;
+        margin-left: 100px;
+
+    }
+
+    .boton_tweet:hover{
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+
+    }
+
+
+    .boton_acceder{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border-color: rgb(49, 137, 238);
+        border-style: solid;
+        border-width: 2px;
+        height: 31px;
+        width: 70px;
+        border-radius: 20px;
+        cursor: pointer; 
+        transition: color 1s;
+    }
+
+    .boton_acceder:hover{
+        background-color: rgb(49, 137, 238);
+        color: white;
+
+
+    }
+    
+</style>
+
+<button class="boton_suscripcion">Suscribirse</button>
+
+<button class="boton_acceder">Acceder</button>
+
+<button class="boton_tweet">Tweet</button>
